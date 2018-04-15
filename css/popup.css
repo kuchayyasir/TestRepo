@@ -1,0 +1,249 @@
+.md-perspective,
+
+.md-perspective body { height: 100%; overflow: hidden; }
+.md-perspective body  { background: #222; -webkit-perspective: 600px; -moz-perspective: 600px; perspective: 600px; }
+.md-modal { position: fixed; top:25%; left: 30%; width: 50%; max-width:500px; min-width: 320px; height: auto; z-index: 2000; visibility: hidden;
+	-webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; backface-visibility: hidden; }
+.md-modal1 { position: fixed; top: 50%; left: 50%; width: 50%; max-width:400px; min-width: 320px; height: auto; z-index: 2000; visibility: hidden;
+	-webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);
+}
+
+.md-trigger { cursor:pointer }
+.popupcen { background:#ededed; padding:0 5px 8px; width:100%	 }
+.ctc-opt { margin:0; padding:0 }
+.ctc-opt li { list-style:none; margin:5px 1% 0; width:48%; float:left }
+.ctc-opt li:last-child { clear:both }
+.ctc-opt li b{ font-weight:500; display:block }
+.ctc-opt li span { display:block }
+
+.ctc-opt li input[type="text"], .ctc-opt li select { width:100%; display:block; border:solid 1px #aeaeae; background:#fff; padding:4px 8px; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; -ms-border-radius:8px }
+
+.codetex { width:30% !important; float:left; margin:0 2% 0 0 }
+.phontex { width:68% !important; float:left }
+
+.callbtn { color:#fff; border:none; padding:6px 20px; border-radius:8px; -webkit-border-radius:8px; -moz-border-radius:8px; -ms-border-radius:8px; background:#e97719 url(../img/call-icon.png) no-repeat 0 0; /* Old browsers */
+
+background: -moz-linear-gradient(top,  #e97719 0%, #bb4800 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e97719), color-stop(100%,#bb4800)); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(top,  #e97719 0%,#bb4800 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(top,  #e97719 0%,#bb4800 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(top,  #e97719 0%,#bb4800 100%); /* IE10+ */
+
+background: linear-gradient(to bottom,  #e97719 0%,#bb4800 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e97719', endColorstr='#bb4800',GradientType=0 ); /* IE6-9 */
+
+ }
+
+
+
+
+
+.popupbot { background:#c14d00; padding:8px 10px 1px 10px; color:#fff; text-align:center }
+
+
+
+.md-show { visibility: visible; }
+
+.md-overlay { position: fixed; width: 100%; height: 100%; visibility: hidden; top: 0; left: 0; z-index:9999999; opacity: 0; background:#000; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+
+
+
+.md-show ~ .md-overlay { opacity: .8; visibility: visible; }
+
+
+
+/* Content styles */
+
+.md-content { color: #000; background: #fff; position: relative; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px; margin: 0 auto }
+
+.md-content h2 { background:#c33 url(../images/trial-icon.png) no-repeat 2% 48%; color:#fff; padding:5px 10px 5px 40px; font-weight:600; font-size:22px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -ms-border-radius:5px; -o-border-radius:5px }
+
+
+
+.md-content button { display: block; margin: 0 auto; font-size: 0.8em; }
+
+.md-close { font-size:16px; margin:4px 0 0; position:absolute; top:0; right:5px }
+
+.md-close:hover { text-decoration:none; color:#ccc !important }
+
+/* Individual modal styles with animations/transitions */
+
+
+
+
+
+/* Effect 7:  slide and stick to top */
+
+/* Effect 10: 3D sign */
+
+.md-effect-10.md-modal {
+
+	-webkit-perspective: 1300px;
+
+	-moz-perspective: 1300px;
+
+	perspective: 1300px;
+
+	z-index:99999999;
+
+}
+
+
+
+.md-effect-10 .md-content {
+
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transform-style: preserve-3d;
+
+	transform-style: preserve-3d;
+
+	-webkit-transform: rotateX(-60deg);
+
+	-moz-transform: rotateX(-60deg);
+
+	-ms-transform: rotateX(-60deg);
+
+	transform: rotateX(-60deg);
+
+	-webkit-transform-origin: 50% 0;
+
+	-moz-transform-origin: 50% 0;
+
+	transform-origin: 50% 0;
+
+	opacity: 0;
+
+	-webkit-transition: all 0.3s;
+
+	-moz-transition: all 0.3s;
+
+	transition: all 0.3s;
+
+}
+
+
+
+.md-show.md-effect-10 .md-content {
+
+	-webkit-transform: rotateX(0deg);
+
+	-moz-transform: rotateX(0deg);
+
+	-ms-transform: rotateX(0deg);
+
+	transform: rotateX(0deg);
+
+	opacity: 1;
+
+}
+
+
+
+@-webkit-keyframes slit {
+
+	50% { -webkit-transform: translateZ(-250px) rotateY(89deg); opacity: .5; -webkit-animation-timing-function: ease-out;}
+
+	100% { -webkit-transform: translateZ(0) rotateY(0deg); opacity: 1; }
+
+}
+
+
+
+@-moz-keyframes slit {
+
+	50% { -moz-transform: translateZ(-250px) rotateY(89deg); opacity: .5; -moz-animation-timing-function: ease-out;}
+
+	100% { -moz-transform: translateZ(0) rotateY(0deg); opacity: 1; }
+
+}
+
+
+
+@keyframes slit {
+
+	50% { transform: translateZ(-250px) rotateY(89deg); opacity: 1; animation-timing-function: ease-in;}
+
+	100% { transform: translateZ(0) rotateY(0deg); opacity: 1; }
+
+}
+
+
+
+
+
+@-webkit-keyframes rotateRightSideFirst {
+
+	50% { -webkit-transform: translateZ(-50px) rotateY(5deg); -webkit-animation-timing-function: ease-out; }
+
+	100% { -webkit-transform: translateZ(-200px); }
+
+}
+
+
+
+@-moz-keyframes rotateRightSideFirst {
+
+	50% { -moz-transform: translateZ(-50px) rotateY(5deg); -moz-animation-timing-function: ease-out; }
+
+	100% { -moz-transform: translateZ(-200px); }
+
+}
+
+
+
+@keyframes rotateRightSideFirst {
+
+	50% { transform: translateZ(-50px) rotateY(5deg); animation-timing-function: ease-out; }
+
+	100% { transform: translateZ(-200px); }
+
+}
+
+
+
+@-webkit-keyframes OpenTop {
+
+	50% { 
+
+		-webkit-transform: rotateX(10deg); 
+
+		-webkit-animation-timing-function: ease-out; 
+
+	}
+
+}
+
+
+
+@-moz-keyframes OpenTop {
+
+	50% { 
+
+		-moz-transform: rotateX(10deg); 
+
+		-moz-animation-timing-function: ease-out; 
+
+	}
+
+}
+
+
+
+@keyframes OpenTop {
+
+	50% { 
+
+		transform: rotateX(10deg); 
+
+		animation-timing-function: ease-out; 
+
+	}
+
+}
